@@ -1,0 +1,72 @@
+INFO - 2024-12-01 10:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-01 10:31:19 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'commerce_kue', 3306, '', 0)
+#1 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programmer\Xampp\htdocs\ecake\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programmer\Xampp\htdocs\ecake\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programmer\Xampp\htdocs\ecake\app\Models\HomeModel.php(16): CodeIgniter\BaseModel->findAll()
+#7 D:\Programmer\Xampp\htdocs\ecake\app\Controllers\Home.php(26): App\Models\HomeModel->getKue()
+#8 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#9 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Programmer\Xampp\htdocs\ecake\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Programmer\Xampp\htdocs\ecake\system\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\X...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Programmer\Xampp\htdocs\ecake\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Programmer\Xampp\htdocs\ecake\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Programmer\Xampp\htdocs\ecake\app\Models\HomeModel.php(16): CodeIgniter\BaseModel->findAll()
+#6 D:\Programmer\Xampp\htdocs\ecake\app\Controllers\Home.php(26): App\Models\HomeModel->getKue()
+#7 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#8 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programmer\Xampp\htdocs\ecake\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Programmer\Xampp\htdocs\ecake\system\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\X...')
+#12 {main}
+CRITICAL - 2024-12-01 10:31:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kue`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\HomeModel.php(16): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Home.php(26): App\Models\HomeModel->getKue()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-12-01 10:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-01 10:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,10 @@
+CRITICAL - 2024-04-13 14:38:37 --> ParseError: Unclosed '{' on line 90
+in APPPATH\Views\konsumen\dashboard.php on line 119.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('konsumen/dashboard', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('konsumen/dashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')

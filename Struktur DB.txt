@@ -1,0 +1,33 @@
+=> kue
+id_kue int
+nama varchar
+kategori varchar
+jenis varchar
+slug varchar
+deskripsi varchar
+harga int
+berat varchar
+gambar varchar
+created_at datetime
+updated_at datetime
+
+=> pesan
+id_order
+id_user_konsumen
+tanggal
+total_harga
+status
+created_at datetime
+updated_at datetime
+
+=> detail_pesan
+id_detail
+id_order
+id_user_konsumen
+produk
+total_produk
+total_harga
+created_at datetime
+updated_at datetime
+
+

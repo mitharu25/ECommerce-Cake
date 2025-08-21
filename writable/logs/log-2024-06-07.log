@@ -1,0 +1,302 @@
+INFO - 2024-06-07 15:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-07 16:07:00 --> mysqli_sql_exception: Unknown column 'pictures.nama_file' in 'field list' in D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `kue`.*,...', 0)
+#1 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kue`.*,...')
+#2 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kue`.*,...')
+#3 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `kue`.*,...', Array, false)
+#4 D:\Programmer\Xampp\htdocs\ecake\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programmer\Xampp\htdocs\ecake\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programmer\Xampp\htdocs\ecake\app\Models\HomeModel.php(62): CodeIgniter\BaseModel->findAll()
+#7 D:\Programmer\Xampp\htdocs\ecake\app\Controllers\Home.php(49): App\Models\HomeModel->getKueWithPictures('1')
+#8 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(941): App\Controllers\Home->detail('nastar')
+#9 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Programmer\Xampp\htdocs\ecake\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Programmer\Xampp\htdocs\ecake\system\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\X...')
+#13 {main}
+CRITICAL - 2024-06-07 16:07:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pictures.nama_file' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = :kue.id_kue:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\HomeModel.php(62): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Home.php(49): App\Models\HomeModel->getKueWithPictures('1')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->detail('nastar')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+CRITICAL - 2024-06-07 16:07:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pictures.nama_file' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = :kue.id_kue:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\HomeModel.php(62): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Home.php(49): App\Models\HomeModel->getKueWithPictures('1')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->detail('nastar')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+CRITICAL - 2024-06-07 16:07:00 --> [Caused by] mysqli_sql_exception: Unknown column 'pictures.nama_file' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = :kue.id_kue:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\HomeModel.php(62): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Home.php(49): App\Models\HomeModel->getKueWithPictures('1')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->detail('nastar')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-07 16:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-07 16:07:10 --> mysqli_sql_exception: Unknown column 'pictures.nama_file' in 'field list' in D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `kue`.*,...', 0)
+#1 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kue`.*,...')
+#2 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kue`.*,...')
+#3 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `kue`.*,...', Array, false)
+#4 D:\Programmer\Xampp\htdocs\ecake\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programmer\Xampp\htdocs\ecake\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programmer\Xampp\htdocs\ecake\app\Models\HomeModel.php(62): CodeIgniter\BaseModel->findAll()
+#7 D:\Programmer\Xampp\htdocs\ecake\app\Controllers\Home.php(49): App\Models\HomeModel->getKueWithPictures('1')
+#8 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(941): App\Controllers\Home->detail('nastar')
+#9 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Programmer\Xampp\htdocs\ecake\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Programmer\Xampp\htdocs\ecake\system\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\X...')
+#13 {main}
+CRITICAL - 2024-06-07 16:07:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pictures.nama_file' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = :kue.id_kue:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\HomeModel.php(62): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Home.php(49): App\Models\HomeModel->getKueWithPictures('1')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->detail('nastar')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+CRITICAL - 2024-06-07 16:07:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pictures.nama_file' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = :kue.id_kue:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\HomeModel.php(62): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Home.php(49): App\Models\HomeModel->getKueWithPictures('1')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->detail('nastar')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+CRITICAL - 2024-06-07 16:07:10 --> [Caused by] mysqli_sql_exception: Unknown column 'pictures.nama_file' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `kue`.*, `pictures`.`nama_file`
+FROM `kue`
+LEFT JOIN `pictures` ON `pictures`.`id_kue` = `kue`.`id_kue`
+WHERE `kue`.`id_kue` = :kue.id_kue:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\HomeModel.php(62): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Home.php(49): App\Models\HomeModel->getKueWithPictures('1')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->detail('nastar')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-07 16:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-07 16:10:54 --> ErrorException: Undefined variable $i
+in APPPATH\Views\konsumen\detail.php on line 26.
+ 1 APPPATH\Views\konsumen\detail.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\konsumen\\detail.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\konsumen\\detail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('konsumen/detail', [], true)
+ 5 APPPATH\Controllers\Home.php(62): view('konsumen/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->detail('nastar')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-07 16:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-07 16:11:52 --> ErrorException: Undefined variable $index
+in APPPATH\Views\konsumen\detail.php on line 26.
+ 1 APPPATH\Views\konsumen\detail.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\konsumen\\detail.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\konsumen\\detail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('konsumen/detail', [], true)
+ 5 APPPATH\Controllers\Home.php(62): view('konsumen/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->detail('nastar')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-07 16:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:19:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:29:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:45:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 17:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

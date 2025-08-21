@@ -1,0 +1,763 @@
+INFO - 2024-06-18 08:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 10:07:04 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pi...', 0)
+#1 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 D:\Programmer\Xampp\htdocs\ecake\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Programmer\Xampp\htdocs\ecake\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 D:\Programmer\Xampp\htdocs\ecake\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\Programmer\Xampp\htdocs\ecake\app\Controllers\Kue.php(140): CodeIgniter\Model->insert(Array)
+#8 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(941): App\Controllers\Kue->addPictureImage('1')
+#9 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kue))
+#10 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Programmer\Xampp\htdocs\ecake\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Programmer\Xampp\htdocs\ecake\system\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\X...')
+#13 {main}
+CRITICAL - 2024-06-18 10:07:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pictures` (`id_kue`, `file`, `created_at`, `updated_at`) VALUES (:id_kue:, :file:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Kue.php(140): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Kue->addPictureImage('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kue))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+CRITICAL - 2024-06-18 10:07:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pictures` (`id_kue`, `file`, `created_at`, `updated_at`) VALUES (NULL, \'nastar_935.jpg\', \'2024-06-18 10:07:04\', \'2024-06-18 10:07:04\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pictures` (`id_kue`, `file`, `created_at`, `updated_at`) VALUES (NULL, \'nastar_935.jpg\', \'2024-06-18 10:07:04\', \'2024-06-18 10:07:04\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pictures` (`id_kue`, `file`, `created_at`, `updated_at`) VALUES (:id_kue:, :file:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Kue.php(140): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Kue->addPictureImage('1')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kue))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+CRITICAL - 2024-06-18 10:07:04 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pictures` (`id_kue`, `file`, `created_at`, `updated_at`) VALUES (NULL, \'nastar_935.jpg\', \'2024-06-18 10:07:04\', \'2024-06-18 10:07:04\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pictures` (`id_kue`, `file`, `created_at`, `updated_at`) VALUES (NULL, \'nastar_935.jpg\', \'2024-06-18 10:07:04\', \'2024-06-18 10:07:04\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pictures` (`id_kue`, `file`, `created_at`, `updated_at`) VALUES (NULL, \'nastar_935.jpg\', \'2024-06-18 10:07:04\', \'2024-06-18 10:07:04\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pictures` (`id_kue`, `file`, `created_at`, `updated_at`) VALUES (:id_kue:, :file:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kue.php(140): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Kue->addPictureImage('1')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kue))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 10:07:44 --> mysqli_sql_exception: Column 'id_kue' cannot be null in D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Programmer\Xampp\htdocs\ecake\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pi...', 0)
+#1 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 D:\Programmer\Xampp\htdocs\ecake\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 D:\Programmer\Xampp\htdocs\ecake\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Programmer\Xampp\htdocs\ecake\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 D:\Programmer\Xampp\htdocs\ecake\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\Programmer\Xampp\htdocs\ecake\app\Controllers\Kue.php(140): CodeIgniter\Model->insert(Array)
+#8 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(941): App\Controllers\Kue->addPictureImage('1')
+#9 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kue))
+#10 D:\Programmer\Xampp\htdocs\ecake\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Programmer\Xampp\htdocs\ecake\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Programmer\Xampp\htdocs\ecake\system\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\X...')
+#13 {main}
+CRITICAL - 2024-06-18 10:07:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_kue' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pictures` (`id_kue`, `file`) VALUES (:id_kue:, :file:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Kue.php(140): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Kue->addPictureImage('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kue))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+CRITICAL - 2024-06-18 10:07:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_kue' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pictures` (`id_kue`, `file`) VALUES (NULL, \'nastar_856.jpg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pictures` (`id_kue`, `file`) VALUES (NULL, \'nastar_856.jpg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pictures` (`id_kue`, `file`) VALUES (:id_kue:, :file:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Kue.php(140): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Kue->addPictureImage('1')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kue))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+CRITICAL - 2024-06-18 10:07:44 --> [Caused by] mysqli_sql_exception: Column 'id_kue' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pictures` (`id_kue`, `file`) VALUES (NULL, \'nastar_856.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pictures` (`id_kue`, `file`) VALUES (NULL, \'nastar_856.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pictures` (`id_kue`, `file`) VALUES (NULL, \'nastar_856.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pictures` (`id_kue`, `file`) VALUES (:id_kue:, :file:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kue.php(140): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Kue->addPictureImage('1')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kue))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:19:31 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 372.
+ 1 APPPATH\Views\admin\produkKue.php(372): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 372)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:20:40 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 442.
+ 1 APPPATH\Views\admin\produkKue.php(442): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 442)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:21:20 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:21:36 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:22:31 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 372.
+ 1 APPPATH\Views\admin\produkKue.php(372): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 372)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:23:00 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:23:17 --> ErrorException: Undefined array key "id_kue"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kue"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:23:36 --> ErrorException: Undefined array key "id_kue"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kue"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:23:37 --> ErrorException: Undefined array key "id_kue"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kue"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:23:37 --> ErrorException: Undefined array key "id_kue"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kue"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:23:37 --> ErrorException: Undefined array key "id_kue"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kue"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:23:37 --> ErrorException: Undefined array key "id_kue"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kue"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:23:37 --> ErrorException: Undefined array key "id_kue"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kue"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:23:37 --> ErrorException: Undefined array key "id_kue"
+in APPPATH\Views\admin\produkKue.php on line 390.
+ 1 APPPATH\Views\admin\produkKue.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kue"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 390)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:23:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:23:49 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:24:30 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:25:11 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:31:03 --> ErrorException: Undefined array key 2
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:31:55 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:40:39 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:34 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:36 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:36 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:36 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:36 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:36 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:36 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:36 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:37 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:37 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:37 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 10:41:37 --> ErrorException: Undefined array key "id_pict"
+in APPPATH\Views\admin\produkKue.php on line 443.
+ 1 APPPATH\Views\admin\produkKue.php(443): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pict"', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php', 443)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\produkKue.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/produkKue', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('admin/produkKue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->DataKue()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 10:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 14:35:31 --> ErrorException: Undefined variable $kue
+in APPPATH\Views\admin\metodeTransaksi.php on line 82.
+ 1 APPPATH\Views\admin\metodeTransaksi.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kue', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\metodeTransaksi.php', 82)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\metodeTransaksi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/metodeTransaksi', [], true)
+ 5 APPPATH\Controllers\Admin.php(80): view('admin/metodeTransaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->MetodeTransaksi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 14:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 14:38:26 --> ErrorException: Undefined variable $kue
+in APPPATH\Views\admin\metodeTransaksi.php on line 76.
+ 1 APPPATH\Views\admin\metodeTransaksi.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kue', 'D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\metodeTransaksi.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Programmer\\Xampp\\htdocs\\ecake\\app\\Views\\admin\\metodeTransaksi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/metodeTransaksi', [], true)
+ 5 APPPATH\Controllers\Admin.php(80): view('admin/metodeTransaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->MetodeTransaksi()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programmer\\Xampp\\htdocs\\ecake\\public\\index.php')
+INFO - 2024-06-18 14:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 15:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 15:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 15:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 15:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 15:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 15:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 15:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
